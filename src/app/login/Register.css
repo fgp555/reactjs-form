@@ -1,0 +1,144 @@
+/* Variables para colores en modo claro y oscuro */
+:root {
+  --background-light: #f9f9f9;
+  --background-dark: #121212;
+  --text-light: #333;
+  --text-dark: #e0e0e0;
+  --border-light: #ddd;
+  --border-dark: #444;
+  --button-light: #4caf50;
+  --button-dark: #81c784;
+  --error-light: #f44336;
+  --error-dark: #ff7961;
+  --success-light: #4caf50;
+  --success-dark: #81c784;
+}
+
+[data-theme="dark"] {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+[data-theme="light"] {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+/* Estilos generales del formulario de registro */
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--background-light);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] .register-container {
+  background-color: var(--background-dark);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--text-light);
+}
+
+/* Estilo del formulario */
+form {
+  width: 100%;
+}
+
+/* Estilo de los grupos de formulario */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Estilo de las etiquetas de los campos */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: var(--text-light);
+}
+
+/* Estilo de los campos de entrada */
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: var(--background-light);
+  color: var(--text-dark);
+}
+
+input:focus {
+  border-color: var(--button-light);
+  outline: none;
+}
+
+/* Estilo para el modo oscuro */
+[data-theme="dark"] input {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  border-color: var(--border-dark);
+}
+
+[data-theme="dark"] input:focus {
+  border-color: var(--button-dark);
+}
+
+/* Estilo de los mensajes de error */
+.error-message {
+  color: var(--error-light);
+  font-size: 0.875rem;
+  margin-top: 5px;
+}
+
+[data-theme="dark"] .error-message {
+  color: var(--error-dark);
+}
+
+/* Estilo del botón de envío */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--button-light);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+[data-theme="dark"] button {
+  background-color: var(--button-dark);
+}
+
+[data-theme="dark"] button:hover {
+  background-color: #66bb6a;
+}
+
+/* Estilo del mensaje de éxito */
+.success-message {
+  margin-top: 20px;
+  color: var(--success-light);
+  font-size: 1rem;
+  text-align: center;
+}
+
+[data-theme="dark"] .success-message {
+  color: var(--success-dark);
+}
